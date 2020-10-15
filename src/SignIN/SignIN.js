@@ -5,6 +5,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import "./SignIN.css";
 import { useHistory, Link } from "react-router-dom";
 import { UserContext } from "../reducer/reducer";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const useStyles = makeStyles({
   root: {
@@ -41,7 +44,7 @@ function SignIN() {
     }
 
     axios
-      .post("http://localhost:8001/api/Signin", {
+      .post(`${process.env.REACT_APP_SERVER_URL}/api/Signin`, {
         email: email,
         password: password,
       })

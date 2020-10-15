@@ -4,6 +4,9 @@ import { UserContext } from "../reducer/reducer";
 import "./UserProfile.css";
 import axios from "axios";
 import { PostAdd } from "@material-ui/icons";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 function UserProfile() {
   const { state, dispatch } = useContext(UserContext);
@@ -21,7 +24,7 @@ function UserProfile() {
   const token = localStorage.getItem("jwt");
   useEffect(() => {
     axios
-      .get("http://localhost:8001/posts/tinder/mycards", {
+      .get(`${process.env.REACT_APP_SERVER_URL}/posts/tinder/mycards`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer${token}`,

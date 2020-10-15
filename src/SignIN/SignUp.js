@@ -3,6 +3,10 @@ import { Button, Card, Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import axios from "axios";
 import "./SignIN.css";
+
+import dotenv from "dotenv";
+
+dotenv.config();
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
@@ -40,7 +44,7 @@ function SignUp() {
     }
 
     axios
-      .post("http://localhost:8001/api/signup", {
+      .post(`${process.env.REACT_APP_SERVER_URL}/api/signup`, {
         name: username,
         email: email,
         password: password,
@@ -49,6 +53,7 @@ function SignUp() {
 
       .catch((error) => {
         setMsg(error.response.data.error);
+        //console.log(error.response);
       });
 
     setUserName("");

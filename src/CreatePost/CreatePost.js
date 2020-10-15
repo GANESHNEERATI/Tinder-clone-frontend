@@ -29,7 +29,7 @@ function CreatePost() {
 
       axios
         .post(
-          "http://localhost:8001/posts/tinder/cards",
+          `${process.env.REACT_APP_SERVER_URL}/posts/tinder/cards`,
           {
             name: name,
             pic: url,

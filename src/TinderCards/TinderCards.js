@@ -6,6 +6,9 @@ import SwipeButtons from "../SwipeButtons/SwipeButtons";
 import { UserContext } from "../reducer/reducer";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 function TinderCards() {
   const [people, setPeople] = useState([]);
@@ -26,7 +29,7 @@ function TinderCards() {
 
     // fetchData();
     axios
-      .get("http://localhost:8001/posts/tinder/cards", {
+      .get(`${process.env.REACT_APP_SERVER_URL}/posts/tinder/cards`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer${token}`,
@@ -38,7 +41,7 @@ function TinderCards() {
 
         //setPosts(response)
       })
-      .catch((error) => console.log(error.response.data));
+      .catch((error) => console.log(error.response));
   }, []);
 
   const swiped = (direction, nameToDelete) => {
