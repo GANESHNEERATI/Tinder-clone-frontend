@@ -1,0 +1,36 @@
+.headder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+
+  border-bottom: 1px solid lightgray;
+}
+
+.headder__logo {
+  object-fit: contain;
+  height: 60px;
+}
+
+.headder__icon {
+  padding: 20px;
+}
+
+.headder__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.headder__buttons > button {
+  border-radius: 100px;
+  background-color: #fd3575;
+  text-transform: inherit;
+  color: white;
+  width: 100px;
+}
+
+.headder__buttons > button:hover {
+  background-color: white;
+  color: #fd3575;
+}

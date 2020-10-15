@@ -1,0 +1,79 @@
+.signInCard{
+    margin-top: 150px;
+    border-color: 5px solid pink;
+
+
+ 
+}
+.cardContainer{
+    max-width: 800px;
+    margin-left: 400px;
+    max-height: 800px;
+    border-color: 1px solid pink;
+    align-items: center;
+    
+}
+
+
+.card__signup >button{
+
+    background-color:#FD3575 ;
+    color: white;
+    margin-top: 10px;
+    border-radius: 50px;
+    width: 100px;
+    margin-left: 350px;
+    margin-bottom: 10px;
+}
+
+.card__signup >button:hover{
+
+    background-color:white ;
+    color: #FD3575;
+    
+}
+
+.card__signup{
+    display: flex;
+    flex-direction: column;
+}
+
+.app_headerImage{
+    object-fit: contain;
+    height: 60px;
+    
+    }
+
+    
+    .header_toast{
+        align-items: center;
+    }
+
+    .header_toast > h3{
+        color: #FD3575;
+        text-align: center;
+
+    }
+
+    .card__signup > input{
+
+        padding: 20px;
+
+
+    }
+    .donthave{
+        display: flex;
+         justify-content: space-evenly;
+        
+    }
+    .donthave > h3{
+        color:#FD3575 ;
+    }
+
+    .donthave > button{
+        background-color:#FD3575 ;
+    color: white;
+    
+
+
+    }
